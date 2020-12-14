@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head><link rel="icon" type="image/gif" href="images (2).jpeg" /></head>
+<style>
+html {
+  height: 100%;
+  background-image: url("images (2).jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+* {
+  box-sizing: border-box;
+}
+.bg-text2{
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.70);
+  color: #eafdfe;
+  font-weight: bold;
+position:absolute;
+  top: 45%;
+  left: 50%;
+ transform: translate(-50%, -50%);
+  width: 60%;
+height:70%;
+  padding: 5px;
+  text-align: center;
+font-family:noir;
+color:#FFD369;
+border-radius:5px;
+}
+.el{
+justify-content: space-evenly;
+display: flex;
+align-items: center;
+margin-top:-40px;
+}
+button{
+background-color:#015668;
+border-radius:5px;
+width:100px;
+padding:5px 5px 5px 5px;
+color:#eafdfe;
+}
+.in{
+background-color:#015668;
+border-radius:5px;
+width:100px;
+padding:5px 5px 5px 5px;
+color:#eafdfe;
+}
+
+</style>
+<script type="text/javascript">
+function fibonacci(){
+var a=parseFloat(my.xy.value);
+if(a<0){
+alert("Invalid");
+}
+else{
+var b=[]; 
+k=0; 
+m=1; 
+var c; 
+for(i=0; i<=a-1; i++){
+b.push(k); 
+c=k+m; 
+k=m; 
+m=c;
+}
+document.getElementById("output").innerHTML=b;
+}
+}
+ function del(){
+         document.getElementById("output").innerHTML=" ";
+     }
+</script>
+<body>
+<div class="bg-text2">
+<b><h1 style="font-size:400%;">Fibonacci Sequence</h1></b>
+<div class="el">
+<label style="margin-right:10px; margin-bottom:-10px; font-size:200%;">Set Range</label>
+<form name="my">
+<input type="number" id="xy" style="padding:5px; width:150px; margin-left:-150px;"/>
+<input type="button" class="in" id="start" value="Start" onclick="fibonacci()" style="margin-top:2%;"/>
+<input type="reset" class="in" style="margin-top:0;" value="Clear" onclick="del()"></div>
+<p style="font-size:250%;">Output;</p>
+<h4 id="output" readonly="read only" style="align:center; font-size:200%"></h4>
+</form>
+</div>
+</body>
+</html>
